@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <!-- 最初の設定は終わっています　必要な方は触ってください -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Carless travel</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="img/png" href="img/favicon.png" />
+  </head>
+  <!-- 最初の設定は終わっています　必要な方は触ってください -->
+
+  <body>
+    <!-- この中に記述していく -->
+    <!-- ここから下にコードを書く -->
+    <div id="home">
+      <header class="page-header wrapper">
+        <div class="logo-area">
+          <a href="plan.html"
+            ><img class="logo" src="img/logo.jpg" alt="Carlesstravelホーム"
+          /></a>
+        </div>
+        <div class="space-area"></div>
+        <nav>
+          <ul class="main-nav">
+            <!-- 
+            <li><a href="plan.html">PLAN</a></li>
+            <li><a href="index.html">GAME</a></li>
+          --></ul>
+        </nav>
+      </header>
+    </div>
+
+    <div class="wrapper">
+      <article>
+        <div id="main04">
+          <div class="main-content">
+            <h1 class="main-title">Let's Enjoy!</h1>
+            <p>運用状況をざっくり把握するための備忘ツール</p>
+          </div>
+        </div>
+        <div id="kabu" class="contents">
+          <h2 class="title">個別株</h2>
+          <p>時期</p>
+          <select name="half-period" class="key">
+            <option value="kabu_0000_00">−−−選択してください−−−</option>
+            <option value="kabu_0000_99">動作確認用</option>
+            <option value="kabu_2021_h2">2021年下期</option>
+            <option value="kabu_2022_h1">2022年上期</option>
+            <option value="kabu_2022_h2">2022年下期</option>
+            <option value="kabu_2023_h1">2023年上期</option>
+            <option value="kabu_2023_h2">2023年下期</option>
+          </select>
+          <ul>
+            <li id="save">Save</li>
+            <li id="clear">Clear</li>
+          </ul>
+          <table id="stock-table">
+            <!-- 入力欄 -->
+          </table>
+          <select name="sum" class="key">
+            <option value="kabu_all">全データ</option>
+            <option value="kabu_half_period">半期合算値</option>
+            <option value="kabu_cd">銘柄合算値</option>
+          </select>
+          <div>
+            全期間合算結果: 税引後配当金<span id="total-dividend"></span>
+            ,税引前売却益 <span id="total-profit"></span> ,税引後売却益
+            <span id="total-taxed-profit"></span>
+          </div>
+          <table id="stock-table_registered">
+            <thead>
+              <tr>
+                <th>時期</th>
+                <th>コード</th>
+                <th>銘柄名</th>
+                <th>取得価格</th>
+                <th>税引後配当金</th>
+                <th>税引前売却益</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <div id="stock-table_kabu_half_period"></div>
+          <div id="stock-table_kabu_cd"></div>
+          <div id="chartcontainer">
+            <canvas id="chart_kabu_half_period"></canvas>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <footer>
+      <div class="wrapper">
+        <p>
+          <small>&copy;2023 Yu Fujita</small>
+        </p>
+      </div>
+    </footer>
+    <!-- ここから上にコードを書く -->
+    <!-- この中に記述していく -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/kabu.js"></script>
+  </body>
+</html>
